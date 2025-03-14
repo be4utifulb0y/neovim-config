@@ -50,7 +50,12 @@ cmp.setup({
 cmp.setup.cmdline('/', {
   sources = {
     { name = 'buffer' }
-  }
+  },
+  mapping = cmp.mapping.preset.cmdline({
+  	['<C-k>'] = {c = cmp.mapping.select_prev_item()},  -- 上箭头选择前一个选项
+  	['<C-j>'] = {c = cmp.mapping.select_next_item()},  -- 上箭头选择前一个选项
+  	['<Tab>'] = { c = cmp.mapping.confirm({ select = true })}
+  }),
 })
 
 cmp.setup.cmdline(':', {

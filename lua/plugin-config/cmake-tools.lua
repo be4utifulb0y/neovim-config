@@ -12,7 +12,7 @@ require("cmake-tools").setup {
 --  },
  cmake_generate_options = { 
      "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
-     "-G Ninja",
+     "-G \"Unix Makefiles\"",
      "-DCMAKE_C_COMPILER=\"D:/Application/Clion/CLion 2023.3.4/bin/mingw/bin/gcc.exe\"",
      "-DCMAKE_CXX_COMPILER=\"D:/Application/Clion/CLion 2023.3.4/bin/mingw/bin/g++.exe\"",
  }, -- this will be passed when invoke `CMakeGenerate`

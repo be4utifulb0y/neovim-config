@@ -1,4 +1,4 @@
---vim.cmd([[highlight HoverSearch guifg=#000000 guibg=#FFFF00]])
+vim.cmd([[highlight HoverSearch guifg=#000000 guibg=#FFFF00]])
 vim.cmd([[highlight HoverSearch guifg=NONE guibg=#3B3E48]])
 -- 设置在停止移动光标后自动高亮当前单词
 vim.o.updatetime = 500  -- 设置触发 CursorHold 的等待时间 (毫秒)

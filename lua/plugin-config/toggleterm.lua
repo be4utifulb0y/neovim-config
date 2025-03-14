@@ -6,7 +6,7 @@ require("toggleterm").setup{
     start_in_insert = true,
     persist_size = true,
     direction = 'horizontal',
-	persist_mode = true,
+--	persist_mode = true,
     close_on_exit = false,
     shell = vim.o.shell,
     float_opts = {

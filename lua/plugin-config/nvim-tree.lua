@@ -42,4 +42,11 @@ nvim_tree.setup({
             quit_on_open = true,
         },
     },
+    --render{
+    --    icons{
+    --        folder = {
+    --            
+    --        },
+    --    },
+    --},
  })

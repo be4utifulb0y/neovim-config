@@ -9,3 +9,11 @@ null_ls.setup({
   },
 })
 
+require("prettier").setup({
+  bin = 'prettier', -- 或 'prettierd'
+  filetypes = { "css", "graphql", "html", "javascript", "javascriptreact", "json", "less", "markdown", "scss", "typescript", "typescriptreact", "yaml" },
+  extra_args = { "--tab-width", "4", "--use-tabs", "false" }  -- 设置缩进为4个空格
+})
+-- 自动保存时格式化
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+

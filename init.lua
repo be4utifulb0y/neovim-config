@@ -18,7 +18,40 @@ require('plugin-config.neogit')
 require("plugin-config.toggleterm")
 require("plugin-config.yankhighlight")
 require("plugin-config.project")
+require("plugin-config.dressing")
 require('plugin-config.trouble')
 require('nvim-autopairs').setup({})
--- 插件配置
+--require('plugin-config/venv-selector')
+--require("cinnamon").setup {
+--    -- Enable all provided keymaps
+--    keymaps = {
+--        basic = true,
+--        --extra = true,
+--    },
+--    -- Only scroll the window
+--    options = { mode = "cursor" },
+--}
+local cinnamon = require("cinnamon")
 
+cinnamon.setup({
+
+    step_size = {
+        -- Number of cursor/window lines moved per step
+        vertical = 1,
+        -- Number of cursor/window columns moved per step
+        horizontal = 1,
+    },
+})
+
+-- Centered scrolling:
+vim.keymap.set("n", "<C-U>", function() cinnamon.scroll("<C-U>zz") end)
+vim.keymap.set("n", "<C-D>", function() cinnamon.scroll("<C-D>zz") end)
+--vim.keymap.set("n", "j", function() cinnamon.scroll("j") end)
+--vim.keymap.set("n", "k", function() cinnamon.scroll("k") end)
+--vim.keymap.set("n", "l", function() cinnamon.scroll("l") end)
+--vim.keymap.set("n", "h", function() cinnamon.scroll("h") end)
+--vim.keymap.set("n", "w", function() cinnamon.scroll("w") end)
+--vim.keymap.set("n", "e", function() cinnamon.scroll("e") end)
+--vim.keymap.set("n", "b", function() cinnamon.scroll("b") end)
+require 'colorizer'.setup()
+-- 插件配置

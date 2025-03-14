@@ -4,6 +4,7 @@ vim.o.relativenumber = true
 vim.o.mouse = ""
 vim.o.number = true  -- 显示行号
 vim.o.shiftwidth = 4
+vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.hlsearch = true  -- 高亮搜索结果
 vim.o.ignorecase = true  -- 搜索时忽略大小写
@@ -34,11 +35,12 @@ vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevel = 99
 vim.o.cursorline = true
 vim.opt.autoread = true
-
+vim.o.scrolloff = 7
 vim.api.nvim_create_autocmd({"FocusGained", "BufEnter", "CursorHold", "CursorHoldI"}, {
   command = "checktime"
 })
 vim.api.nvim_create_autocmd("FileChangedShellPost", {
   command = "echohl WarningMsg | echo 'File changed on disk. Buffer reloaded.' | echohl None"
 })
+vim.g.cinnamon_cursor_enable = 1  -- 启用光标平滑移动
 

@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true}
 
-map('v','p','"_dP',opt)
+--map('v','p','"_dP',opt)
 map('n','gg','gg0',opt)
 map('n','<A-m>',":NvimTreeToggle<CR>",opt)
 -- bufferline
@@ -35,6 +35,12 @@ function rename_clear_input()
         end
     end)
 end
-map('n','<leader>rn',"<cmd>lua rename_clear_input()<CR>",opt)
---map('n','<leader>rn',':lua vim.lsp.buf.rename()<CR>',opt)
+--map('n','<leader>rn',"<cmd>lua rename_clear_input()<CR>",opt)
+map('n','<leader>rn',':lua vim.lsp.buf.rename()<CR>',opt)
 vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
+
+map('i','<C-l>','<Right>',opt)
+map('i','<C-h>','<Left>',opt)
+map('i','<C-j>','<Down>',opt)
+map('i','<C-k>','<Up>',opt)
+

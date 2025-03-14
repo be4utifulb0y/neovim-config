@@ -2,6 +2,7 @@ vim.cmd [[
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Civitasv/cmake-tools.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+"Plug 'sumneko/lua-language-server'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'sainnhe/sonokai'
@@ -9,6 +10,7 @@ Plug 'NeogitOrg/neogit'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'famiu/bufdelete.nvim'
 Plug 'navarasu/onedark.nvim' 
 Plug 'neovim/nvim-lspconfig'
@@ -41,5 +43,17 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'projekt0n/github-nvim-theme'
 Plug 'folke/tokyonight.nvim'
 Plug 'windwp/nvim-autopairs'
+Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'declancm/cinnamon.nvim'
+Plug 'stevearc/dressing.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'linux-cultist/venv-selector.nvim'
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+
+
+" If you have nodejs
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 ]]
